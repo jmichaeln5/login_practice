@@ -12,9 +12,25 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :title %>
+    <%= form.text_area :title, id: :post_title %>
+  </div>
+
+  <div class="field">
     <%= form.label :comment %>
     <%= form.text_area :comment, id: :post_comment %>
   </div>
+
+  <div>
+    <%= "User ID" %>
+    <br>
+    <%= @current_user.id %>
+    <br>
+    
+    <% form.label :user_id %>
+    <% form.text_area :user_id, id: :current_user_id %>
+  </div>
+
 
   <div class="actions">
     <%= form.submit %>
